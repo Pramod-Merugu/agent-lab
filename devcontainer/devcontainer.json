@@ -1,0 +1,13 @@
+{
+  "name": "agent-lab",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "hostRequirements": { "cpus": 4 },
+  "postCreateCommand": "pip install uv && uv pip install --system -r requirements.txt",
+  "forwardPorts": [8000, 8501]
+}
